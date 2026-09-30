@@ -10,14 +10,16 @@ plt.close('all')
 L = 1.e5  # length of domain (m)
 initialthickness=800
 angle = 0.2  # bedrock slope in degrees
-amplitudes=[-0.5,0.9]
+#jak głębokie są te bumpy w bedrocku
+#amplitudes=[-0.5 ,0.9]
+amplitudes=[0.8 ,-0.4] #updated
 
 # Numerical constants
 m = 51  # number of grid points
 x = np.linspace(0, L, m)  # horizontal distance
 dx = L / (m - 1)   # dx *(m-1)=L, m-1 =L/dx, m= L/dx+1
 dt = 0.1  # time step (years)  # Make sure you don't violate the CFL condition: dt < C/dx^2
-time_end = 200  # duration (years)
+time_end = 200  # duration (years) model symuluje 200 lat ewolucji lodowca
 
 
 # Physical constants  MPa - m - a
